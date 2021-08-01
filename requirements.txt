@@ -1,5 +1,7 @@
+email-validator
 flake8
 flask
+flask-login
 flask-migrate
 flask-sqlalchemy
 flask-wtf
