@@ -2,6 +2,11 @@
 
 export FLASK_APP=app.py
 export FLASK_ENV=development
+export MAIL_SERVER=smtp.googlemail.com
+export MAIL_PORT=587
+export MAIL_USE_TLS=1
+export MAIL_USERNAME=<your-gmail-username>
+export MAIL_PASSWORD=<your-gmail-password>
 
 UNAME=$(uname)
 
