@@ -13,6 +13,7 @@ elif [[ "$UNAME" == CYGWIN* || "$UNAME" == MINGW* ]] ; then
     set FLASK_ENV=development
 fi
 
+xdg-open http://127.0.0.1:5000/
 flask run
 
 # flask db migrate -m ...
