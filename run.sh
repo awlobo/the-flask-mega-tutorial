@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export FLASK_APP=app.py
+export FLASK_APP=microblog.py
 export FLASK_ENV=development
 export MAIL_SERVER=smtp.googlemail.com
 export MAIL_PORT=587
@@ -11,10 +11,10 @@ export MAIL_PASSWORD="<your-gmail-password>"
 UNAME=$(uname)
 
 if [[ "$UNAME" == "Linux" || "$UNAME" == "Darwin" ]] ; then
-	export FLASK_APP=app.py
+	export FLASK_APP=microblog.py
     export FLASK_ENV=development
 elif [[ "$UNAME" == CYGWIN* || "$UNAME" == MINGW* ]] ; then
-	set FLASK_APP=app.py
+	set FLASK_APP=microblog.py
     set FLASK_ENV=development
 fi
 
@@ -23,3 +23,12 @@ flask run
 
 # flask db migrate -m ...
 # flask db upgrade
+
+# Extract all translatable texts
+# pybabel extract -F babel.cfg -k _l -o messages.pot .
+# Generate a language catalog
+# pybabel init -i messages.pot -d app/translations -l es
+# Compile Translations
+# pybabel compile -d app/translations
+# Update tranlations
+# (venv) $ pybabel update -i messages.pot -d app/translations

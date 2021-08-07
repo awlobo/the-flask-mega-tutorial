@@ -1,6 +1,7 @@
 email-validator
 flake8
 flask
+flask-babel
 flask-bootstrap
 flask-login
 flask-mail
