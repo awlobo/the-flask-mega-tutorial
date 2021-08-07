@@ -1,6 +1,7 @@
 from app import app, db
 from app.email import send_password_reset_email
-from app.forms import *
+from app.forms import EditProfileForm, EmptyForm, LoginForm, PostForm, \
+    RegistrationForm, ResetPasswordForm, ResetPasswordRequestForm
 from app.models import User, Post
 from datetime import datetime
 from flask import render_template, flash, redirect, url_for
