@@ -8,6 +8,7 @@ load_dotenv(os.path.join(basedir, '.env'))
 
 class Config(object):
     ADMINS = ['your-email@example.com']
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
     LANGUAGES = ['en', 'es']
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     MAIL_PORT = int(os.environ.get('MAIL_PORT') or 25)

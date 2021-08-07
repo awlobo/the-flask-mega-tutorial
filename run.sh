@@ -8,6 +8,7 @@ export MAIL_USE_TLS=1
 export MAIL_USERNAME="<your-gmail-username>"
 export MAIL_PASSWORD="<your-gmail-password>"
 export MS_TRANSLATOR_KEY=2b9ae2bfc7374697983d1047931eee90
+export ELASTICSEARCH_URL=http://localhost:9200
 
 UNAME=$(uname)
 
