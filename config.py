@@ -17,6 +17,7 @@ class Config(object):
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     POSTS_PER_PAGE = 5
+    REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-know'
     SQLALCHEMY_DATABASE_URI = os.environ.get(
         'DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
