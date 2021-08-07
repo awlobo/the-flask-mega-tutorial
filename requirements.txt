@@ -1,10 +1,11 @@
 email-validator
 flake8
 flask
+flask-bootstrap
 flask-login
 flask-mail
 flask-migrate
 flask-sqlalchemy
 flask-wtf
 pyjwt
-python-dotenv
+python-dotenvw
