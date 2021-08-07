@@ -8,4 +8,4 @@ flask-migrate
 flask-sqlalchemy
 flask-wtf
 pyjwt
-python-dotenvw
+python-dotenv
