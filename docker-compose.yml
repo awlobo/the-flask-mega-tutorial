@@ -1,0 +1,41 @@
+version: '3.3'
+services:
+  app:
+    image: microblog:latest
+    networks:
+      - privnet
+    env_file:
+      - .env
+    ports:
+      - 8000:5000
+    depends_on:
+      - db
+    container_name: miniblog
+    depends_on:
+      - "db"
+      - "elasticsearch"
+  db:
+    image: mysql/mysql-server:5.7
+    networks:
+      - privnet
+    env_file: .env
+    container_name: mysql-db
+    volumes:
+      - db_data:/var/lib/mysql
+  elasticsearch:
+    image: elasticsearch:7.6.2
+    env_file: .env
+    networks:
+        - privnet
+    environment:
+        discovery.type: single-node
+    ports:
+        - 9200:9200
+        - 9300:9300
+    volumes:
+        - :/usr/share/elasticsearch/data
+    container_name: elasticsearch
+networks:
+    privnet:
+volumes:
+  db_data:
