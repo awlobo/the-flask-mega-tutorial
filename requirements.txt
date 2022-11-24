@@ -26,7 +26,7 @@ idna==3.2
 itsdangerous==2.0.1
 Jinja2==3.0.1
 langdetect==1.0.9
-Mako==1.1.4
+Mako==1.2.2
 MarkupSafe==2.0.1
 mccabe==0.6.1
 pycodestyle==2.7.0
