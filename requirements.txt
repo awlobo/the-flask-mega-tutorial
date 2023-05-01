@@ -10,7 +10,7 @@ dominate==2.6.0
 elasticsearch==8.6.0
 email-validator==1.1.3
 flake8==6.0.0
-Flask==2.0.1
+Flask==2.3.2
 Flask-Babel==2.0.0
 Flask-Bootstrap==3.3.7.1
 Flask-HTTPAuth==4.4.0
